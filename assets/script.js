@@ -1,8 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-var today = dayjs();
-$('#currentDay').text(today.format('MMM D, YYYY'));
+
 
 
 
@@ -29,20 +28,39 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  $(function timeTracker () {
+  let today = dayjs();
+  $('#currentDay').text(today.format('MMM D, YYYY'));
     
-$("time-block")
+$("time-block").each(function(){
+$(this).removeClass("future");
+$(this).removeClass("past");
+$(this).removeClass("present");
 
-if (blockTime < timeNow){
-  
-}
+let hour = parsInt($(this).attr("id").split("-")[1]);
 
-else if(blockTime === timeNow)
 
-else (blockTime > timeNow)
+
+if (hour < dayjs().hour()){
+    $(this).addClass("past");
+}else if (hour === dayjs().hour()){
+    $(this).addClass("present");
+}else {
+        $(this).addClass("future");
+    }
+console.log()
+});
+
 
   })
-  let now = dayjs(); console. log(now. format());
+$('hour-9').children('description').val(localStorage.getItem('hour-9'));
+$('hour-10').children('description').val(localStorage.getItem('hour-10'));
+$('hour-11').children('description').val(localStorage.getItem('hour-11'));
+$('hour-12').children('description').val(localStorage.getItem('hour-12'));
+$('hour-13').children('description').val(localStorage.getItem('hour-13'));
+$('hour-14').children('description').val(localStorage.getItem('hour-14'));
+$('hour-15').children('description').val(localStorage.getItem('hour-15'));
+$('hour-16').children('description').val(localStorage.getItem('hour-16'));
+$('hour-17').children('description').val(localStorage.getItem('hour-17'));
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
@@ -50,4 +68,3 @@ else (blockTime > timeNow)
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
