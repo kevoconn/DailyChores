@@ -1,6 +1,6 @@
-#Daily Chores
+# Daily Chores
 
-#Homework 5
+# Homework 5
 
 A simple calendar application that allows a user to save events for each hour of the work day.
 
@@ -10,11 +10,10 @@ https://kevoconn.github.io/DailyChores/
 
 #Screenshot
 
-![Screenshot (9)](https://user-images.githubusercontent.com/114611839/204189143-18bd4a9e-7882-430c-a4a8-a99dda39a214.png)
+![Screenshot (10)](https://user-images.githubusercontent.com/114611839/204189604-31d3cfcb-abe0-4f7d-ac25-6e9cb2a7690b.png)
 
 
-
-#Description
+# Description
 
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
@@ -34,5 +33,5 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
-#Credit
+# Credit
 Kevin O'Connor
